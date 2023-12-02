@@ -3,3 +3,4 @@ data/*
 submission.zip
 graduate-project-ReedMerrill.code-workspace
 notes/*
+__pycache__/*
