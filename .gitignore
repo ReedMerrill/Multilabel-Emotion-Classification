@@ -1,5 +1,5 @@
 model
-train.csv
-dev.csv
-test*.csv
+data/*
 submission.zip
+graduate-project-ReedMerrill.code-workspace
+notes/*
