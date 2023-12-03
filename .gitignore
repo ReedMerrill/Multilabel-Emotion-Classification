@@ -1,5 +1,5 @@
-model
-data/*
+logs/*
+checkpoints/*
 submission.zip
 graduate-project-ReedMerrill.code-workspace
 notes/*
