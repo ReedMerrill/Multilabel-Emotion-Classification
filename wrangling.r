@@ -1,23 +1,18 @@
-library(tidyverse)
+import pandas as pd
 
-dt <- read_csv("data/train.csv")
+dt = pd.read_csv("data/train.csv")
 
 # get the unique number of label combinations
-dt$label_strings <- paste(
-    dt$admiration, dt$amusement, dt$gratitude, dt$love, dt$pride, dt$relief, dt$remorse, sep = "") #nolint
+dt['label_strings'] = dt[].astype(str).agg(''.join, axis=1)
 
 # solve for the proportional sample weights
-weights <- dt |>
-    group_by(label_strings) |>
-    summarise(
-        n = n(),
-        weight = (1 / n) * 10
-) |> select(-c(n))
+weights = dt.groupby('label_strings').size().reset_index(name='n')
+weights['weight'] = (1 / weights['n']) * 10
+weights = weights.drop('n', axis=1)
 
 # join weights to the original data
-dt <- dt |>
-    left_join(weights, by = "label_strings") |>
-    select(-label_strings) |>
-    relocate(weight, .before = text)
+dt = dt.merge(weights, on='label_strings', how='left')
+dt = dt.drop('label_strings', axis=1)
+dt = dt[['weight'] + [col for col in dt.columns if col != 'weight']]
 
-write_csv(dt, "data/train_weights.csv")
+dt.to_csv("data/train_weights.csv", index=False)
