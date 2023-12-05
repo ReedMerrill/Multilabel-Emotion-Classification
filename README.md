@@ -1,5 +1,5 @@
 :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: 
 
-The model is written in `nn.ipynb`
+The model is specified in `nn.ipynb`
 
 :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: :fireworks: 
